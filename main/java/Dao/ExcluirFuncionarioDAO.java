@@ -34,7 +34,7 @@ public class ExcluirFuncionarioDAO {
             try {
                 conexao.close();
             } catch (SQLException e) {
-                e.printStackTrace(); // ou você pode lidar com a exceção de outra forma
+                e.printStackTrace(); 
             }
         }
     }
