@@ -26,15 +26,15 @@ public class ExibirBDDAO {
         String sql = "SELECT codigo, modelo, preco, categoria FROM restaurante";
         try (Statement statement = connection.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_READ_ONLY);
              ResultSet resultSet = statement.executeQuery(sql)) {
-            // Obter o número de linhas no ResultSet
+ 
             resultSet.last();
             int rowCount = resultSet.getRow();
             resultSet.beforeFirst();
 
-            // Definir a estrutura do array bidimensional
+            
             Object[][] data = new Object[rowCount][4];
 
-            // Preencher o array bidimensional com os dados do ResultSet
+        
             int index = 0;
             while (resultSet.next()) {
                 data[index][0] = resultSet.getInt("codigo");
