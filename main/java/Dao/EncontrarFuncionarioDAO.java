@@ -22,33 +22,6 @@ public class EncontrarFuncionarioDAO {
     private static final String USUARIO = "root";
     private static final String SENHA = "123456";
     
-    
-        /*public static Funcionarios buscarFuncionarioPorCpf(String cpf, int registro) {
-        Funcionarios colaborador = new Funcionarios();
-
-        try (Connection connection = DriverManager.getConnection(URL, USUARIO, SENHA)) {
-            //String sql = "SELECT cliente, mesa, produto, quantidade, forma_pagamento, preco FROM pedidos WHERE id = ?";
-            String sql = "SELECT nome,cpf,nascimento,nivel,registro FROM funcionarios WHERE cpf = ? AND registro = ?";
-            try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
-                preparedStatement.setString(1, cpf);
-                 preparedStatement.setInt(5, registro);
-                try (ResultSet resultSet = preparedStatement.executeQuery()) {
-                    if (resultSet.next()) {
-                       colaborador.nome = resultSet.getString("nome");                       
-                        colaborador.nivel = resultSet.getInt("nivel");
-                    } else {
-                        JOptionPane.showMessageDialog(null, "Funcionario não encontrado no banco de dados.");
-                        return null;
-                    }
-                }
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-            // Lide com exceções adequadamente de acordo com sua aplicação
-        }
-
-        return colaborador;
-    }*/
     public static Funcionarios buscarFuncionarioPorCpf(String cpf, int registro) {
     Funcionarios colaborador = new Funcionarios();
 
@@ -72,7 +45,7 @@ public class EncontrarFuncionarioDAO {
         }
     } catch (SQLException e) {
         e.printStackTrace();
-        // Lide com exceções adequadamente de acordo com sua aplicação
+   
     }
 
     return colaborador;
